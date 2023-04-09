@@ -1,5 +1,6 @@
 import 'package:expense_processor/transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(BaseWidget());
 
@@ -89,7 +90,7 @@ class _HomeScreenWidget extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          tr.date.toString(),
+                          DateFormat.yMMMMd().format(tr.date),
                           style: TextStyle(
                             color: Colors.black54,
                             fontSize: 16,
